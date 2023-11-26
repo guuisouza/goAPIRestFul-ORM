@@ -35,7 +35,7 @@ func init() {
 
 func Load() error {
 	viper.SetConfigName("config")
-	viper.SetConfigType("toml") // Json?
+	viper.SetConfigType("toml")
 	viper.AddConfigPath(".")
 	err := viper.ReadInConfig()
 	if err != nil {
