@@ -36,7 +36,7 @@ func Delete(w http.ResponseWriter, r *http.Request) {
 
 	resp := map[string]any{
 		"Error":   false,
-		"Message": "dados atualizados com sucesso",
+		"Message": "dados removidos com sucesso",
 	}
 
 	w.Header().Add("Content-Type", "application/json")

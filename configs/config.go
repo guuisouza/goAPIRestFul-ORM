@@ -22,7 +22,7 @@ type DBConfig struct {
 	Host     string
 	Port     string
 	User     string
-	Pass     string
+	Password string
 	Database string
 }
 
@@ -35,7 +35,7 @@ func init() {
 
 func Load() error {
 	viper.SetConfigName("config")
-	viper.SetConfigType("toml")
+	viper.SetConfigType("json")
 	viper.AddConfigPath(".")
 	err := viper.ReadInConfig()
 	if err != nil {
@@ -54,7 +54,7 @@ func Load() error {
 		Host:     viper.GetString("database.host"),
 		Port:     viper.GetString("database.port"),
 		User:     viper.GetString("database.user"),
-		Pass:     viper.GetString("database.pass"),
+		Password: viper.GetString("database.password"),
 		Database: viper.GetString("database.name"),
 	}
 
